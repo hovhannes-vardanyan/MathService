@@ -122,6 +122,7 @@ namespace MathService
 
                         byte[] bytes = udpListener.Receive(ref iPEndPoint);
                         string message = Encoding.ASCII.GetString(bytes, 0, bytes.Length);
+
                         Console.WriteLine("Received message");
                         byte[] sendMessage = Encoding.ASCII.GetBytes(MsgReader(message));
                         udpListener.Send(sendMessage, sendMessage.Length);

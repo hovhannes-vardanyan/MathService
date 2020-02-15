@@ -38,9 +38,11 @@ namespace Client
                     string message = Console.ReadLine();
                     byte[] data = Encoding.UTF8.GetBytes(message);
 
+                    //sending message
                     Console.WriteLine("Sending Message");
                     udpClient.Send(data, data.Length);
 
+                    // receiving message
                     byte[] receivedData = udpClient.Receive(ref iPEndPoint);
                     string receivedMsg = Encoding.UTF8.GetString(data);
                     Console.WriteLine("Received Messeage:");
