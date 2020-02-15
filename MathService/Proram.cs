@@ -111,7 +111,7 @@ namespace MathService
         {
             IPAddress localhost = IPAddress.Parse("127.0.0.1");
             const int portNumber = 1042;
-            IPEndPoint iPEndPoint = new IPEndPoint(IPAddress.Any, portNumber);
+            IPEndPoint iPEndPoint = new IPEndPoint(localhost, portNumber);
             try
             {
                 while (true)
